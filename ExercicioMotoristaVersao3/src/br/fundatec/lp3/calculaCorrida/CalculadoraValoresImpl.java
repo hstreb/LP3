@@ -3,9 +3,11 @@ package br.fundatec.lp3.calculaCorrida;
 import br.fundatec.lp3.motorista.Motorista;
 import br.fundatec.lp3.passageiro.Passageiro;
 
-public class CalculaCorrida {
+public class CalculadoraValoresImpl implements CalculadoraValores {
 
-	public Double calculaViagem(Motorista motorista, String dataViagemInicio, String dataViagemFim) {
+	// calcula valor que o motorista ira receber
+	@Override
+	public Double calcularValorMotorista(Motorista motorista, String dataViagemInicio, String dataViagemFim) {
 		double valorCorrida = 0;
 
 		for (Passageiro passageiro : motorista.getListaDePassageiro()) {
@@ -17,10 +19,12 @@ public class CalculaCorrida {
 		}
 		return valorCorrida;
 	}
-	
-	public double calculaValorDevidoPeloPassageiro(Passageiro passageiro) {
+
+	// calcula o valor devido pelo passageiro
+	@Override
+	public double calcularValorPassageiro(Passageiro passageiro) {
 		double resultado = (passageiro.getQuantidadeMinutos() * 0.50) + (passageiro.getKmRodado() * 0.20);
-		return resultado = (resultado * 0.15);
+		return resultado + (resultado * 0.15);
 	}
 	
 	
