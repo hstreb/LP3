@@ -1,13 +1,10 @@
 package br.org.fundatec.ti11app;
 
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
-
-
-        Configuracao configuracao = new Configuracao();
-        Gerenciador gerenciador = configuracao.configurarGerenciador();
-        gerenciador.imprimeValorMotorista();
-        gerenciador.imprimeValorPassageiros();
-
+        InterfaceDoUsuario ui = Configuracao.getUI();
+        ui.iniciar();
     }
 }

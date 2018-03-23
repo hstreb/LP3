@@ -7,5 +7,5 @@ public interface CalculadoraValores {
     Double calcularValorMotorista(Motorista motorista, LocalDate dataInicio, LocalDate dataFim);
 
     // calcula o valor devido pelo passageiro
-    double calcularValorPassageiro(Passageiro passageiro);
+//    double calcularValorPassageiro(Passageiro passageiro);
 }

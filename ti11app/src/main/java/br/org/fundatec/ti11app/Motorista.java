@@ -1,23 +1,29 @@
 package br.org.fundatec.ti11app;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Motorista {
 
 	private String nome;
-	private List<Passageiro> listaDePassageiro;
-	
-	public Motorista(String nome, List<Passageiro> listaDePassageiro) {
+	private List<Viagem> viagens;
+
+	public Motorista(String nome) {
 		this.nome = nome;
-		this.listaDePassageiro = listaDePassageiro;
+		this.viagens = new ArrayList<>();
+	}
+
+	public Motorista(String nome, List<Viagem> viagens) {
+		this.nome = nome;
+		this.viagens = viagens;
 	}
 	
 	public String getNome() {
 		return nome;
 	}
-	public List<Passageiro> getListaDePassageiro() {
-		return listaDePassageiro;
+	public List<Viagem> getViagens() {
+		return viagens;
 	}
 
 	@Override
@@ -26,12 +32,19 @@ public class Motorista {
 		if (o == null || getClass() != o.getClass()) return false;
 		Motorista motorista = (Motorista) o;
 		return Objects.equals(nome, motorista.nome) &&
-				Objects.equals(listaDePassageiro, motorista.listaDePassageiro);
+				Objects.equals(viagens, motorista.viagens);
 	}
 
 	@Override
 	public int hashCode() {
+		return Objects.hash(nome, viagens);
+	}
 
-		return Objects.hash(nome, listaDePassageiro);
+	@Override
+	public String toString() {
+		return "Motorista{" +
+				"nome='" + nome + '\'' +
+				", viagens=" + viagens +
+				'}';
 	}
 }

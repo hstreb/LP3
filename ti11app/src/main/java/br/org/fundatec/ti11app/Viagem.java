@@ -3,15 +3,15 @@ package br.org.fundatec.ti11app;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Passageiro {
+public class Viagem {
 
-	private String nome;
+	private String nomePassageiro;
 	private double kmRodado;
 	private int quantidadeMinutos;
 	private LocalDate dataViagem;
 
-	public Passageiro(String nome, double kmRodado, int quantidadeMinutos, LocalDate dataViagem) {
-		this.nome = nome;
+	public Viagem(String nomePassageiro, double kmRodado, int quantidadeMinutos, LocalDate dataViagem) {
+		this.nomePassageiro = nomePassageiro;
 		this.kmRodado = kmRodado;
 		this.quantidadeMinutos = quantidadeMinutos;
 		this.dataViagem = dataViagem;
@@ -21,8 +21,8 @@ public class Passageiro {
 		return dataViagem;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomePassageiro() {
+		return nomePassageiro;
 	}
 
 	public double getKmRodado() {
@@ -37,16 +37,15 @@ public class Passageiro {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Passageiro that = (Passageiro) o;
+		Viagem that = (Viagem) o;
 		return Double.compare(that.kmRodado, kmRodado) == 0 &&
 				quantidadeMinutos == that.quantidadeMinutos &&
-				Objects.equals(nome, that.nome) &&
+				Objects.equals(nomePassageiro, that.nomePassageiro) &&
 				Objects.equals(dataViagem, that.dataViagem);
 	}
 
 	@Override
 	public int hashCode() {
-
-		return Objects.hash(nome, kmRodado, quantidadeMinutos, dataViagem);
+		return Objects.hash(nomePassageiro, kmRodado, quantidadeMinutos, dataViagem);
 	}
 }
