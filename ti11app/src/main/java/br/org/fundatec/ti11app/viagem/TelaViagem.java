@@ -30,7 +30,7 @@ public class TelaViagem {
 
         ViagemDTO dto = new ViagemDTO(nomeMotorista, nomePassageiro, kmRodados, qtdMinutos,dataViagem );
 
-        viagemService.adicionaViagem(dto);
+//        viagemService.adicionaViagem(dto);
         System.out.println("viagem adicionada");
 
     }

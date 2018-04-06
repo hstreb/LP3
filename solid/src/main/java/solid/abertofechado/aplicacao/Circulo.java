@@ -1,7 +1,7 @@
 package solid.abertofechado.aplicacao;
 
 public class Circulo implements Forma {
-    public static final double PI = 3.1436;
+    public static final double PI = 3.14;
     private double raio;
 
     public double getRaio() {
