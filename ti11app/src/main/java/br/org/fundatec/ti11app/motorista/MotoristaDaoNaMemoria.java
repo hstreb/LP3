@@ -13,6 +13,15 @@ public class MotoristaDaoNaMemoria implements MotoristaDao {
     }
 
     public Optional<Motorista> buscarPorNome(String nome) {
+        for (int i = 0; i < motoristas.size(); i++) {
+            Motorista motorista = motoristas.get(i);
+            // uso do motorista
+        }
+        for (Motorista motorista: motoristas) {
+            // uso do motorista
+        }
+
+
         return motoristas.stream()
                 .filter(motorista -> motorista.getNome().equals(nome))
                 .findFirst();
