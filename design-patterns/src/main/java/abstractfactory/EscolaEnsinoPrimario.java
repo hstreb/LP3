@@ -1,14 +1,14 @@
 package abstractfactory;
 
-import java.util.List;
-
 public class EscolaEnsinoPrimario extends Escola {
-    public EscolaEnsinoPrimario(List<Sala> salas, Biblioteca biblioteca) {
-        super(salas, biblioteca);
+    public EscolaEnsinoPrimario(Sala sala) {
+        super(sala);
     }
 
     @Override
     public String toString() {
-        return "EscolaEnsinoPrimario";
+        return "EscolaEnsinoPrimario{" +
+                "sala=" + getSala() +
+                '}';
     }
 }

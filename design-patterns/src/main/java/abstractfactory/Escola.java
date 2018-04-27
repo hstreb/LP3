@@ -1,25 +1,17 @@
 package abstractfactory;
 
-import java.util.List;
-
 public abstract class Escola {
 
     public static final int ENSINO_PRIMARIO = 1;
     public static final int ENSINO_MEDIO = 2;
 
-    private List<Sala> salas;
-    private Biblioteca biblioteca;
+    private Sala sala;
 
-    public Escola(List<Sala> salas, Biblioteca biblioteca) {
-        this.salas = salas;
-        this.biblioteca = biblioteca;
+    public Escola(Sala sala) {
+        this.sala = sala;
     }
 
-    public List<Sala> getSalas() {
-        return salas;
-    }
-
-    public Biblioteca getBiblioteca() {
-        return biblioteca;
+    public Sala getSala() {
+        return sala;
     }
 }

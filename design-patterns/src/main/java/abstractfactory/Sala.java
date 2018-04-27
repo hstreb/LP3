@@ -1,4 +1,5 @@
 package abstractfactory;
 
-public class Sala {
+public abstract class Sala {
+    public abstract String getCadeira();
 }
